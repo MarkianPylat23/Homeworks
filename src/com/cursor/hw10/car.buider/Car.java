@@ -1,4 +1,4 @@
-package com.cursor.hw10.car.buider;
+package com.cursor.hw10.car.builder;
 
 public class Car {
     private String name;
