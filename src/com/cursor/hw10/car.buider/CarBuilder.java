@@ -4,7 +4,7 @@ public class CarBuilder {
     private String name;
     private String model;
     private String audio;
-    private int wheels;
+    private int wheelsAmount;
 
     public CarBuilder createName(String name) {
         this.name = name;
@@ -22,7 +22,7 @@ public class CarBuilder {
     }
 
     public CarBuilder createWheels(int wheels) {
-        this.wheels = wheels;
+        this.wheelsAmount = wheels;
         return this;
     }
 
@@ -31,7 +31,7 @@ public class CarBuilder {
         car.setName(name);
         car.setModel(model);
         car.setAudio(audio);
-        car.setWheels(wheels);
+        car.setWheels(wheelsAmount);
         return car;
     }
 }
