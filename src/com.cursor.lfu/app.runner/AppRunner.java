@@ -4,7 +4,7 @@ import com.cursor.lfu.lfu.task.LFUCache;
 import com.cursor.lfu.lfu.task.CarNews;
 
 public class AppRunner {
-    LFUCache cache = new LFUCache(5);
+    LFUCache cache = new LFUCache(12);
     CarNews news = new CarNews();
 
     public void runApp() {
@@ -16,8 +16,15 @@ public class AppRunner {
         cache.put(3L, news.getValue("Audi"));
         cache.put(4L, news.getValue("Toyota"));
         cache.put(5L, news.getValue("Renault"));
+        cache.put(6L,news.getValue("Daihatsu"));
+        cache.put(7L,news.getValue("Ford"));
+        cache.put(8L,news.getValue("GMS"));
+        cache.put(9L,news.getValue("Isuzu"));
+        cache.put(10L,news.getValue("Infinity"));
+        cache.put(11L,news.getValue("Suzuki"));
+        cache.put(12L,news.getValue("Mercedes"));
 
-        for (long i = 1L; i <= 5; i++) {
+        for (long i = 1L; i <= 12; i++) {
             if (cache.get(i) != null) {
                 System.out.println("News for the key " + i + " is: " + cache.get(i));
             }
