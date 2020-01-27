@@ -1,6 +1,6 @@
-package com.cursor.lfu;
+package com.cursor.hw13;
 
-import com.cursor.lfu.app.runner.AppRunner;
+import com.cursor.hw13.app.runner.AppRunner;
 
 public class Main {
     public static void main(String[] args) {
