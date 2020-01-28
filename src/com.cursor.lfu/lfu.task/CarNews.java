@@ -4,25 +4,25 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class CarNews {
-    private Map<String, String> carNews = new HashMap<>();
+    private Map<String, String> carBrendToNews = new HashMap<>();
 
     public void addCarNews() {
-        carNews.put("Volkswagen", "There will be a new model of Golf in 2020 ");
-        carNews.put("BMW","Company will show new electric car on base i3 ");
-        carNews.put("Audi","Customers can buy audi e-tron in 2020 ");
-        carNews.put("Toyota","The new sports car will be show in March ");
-        carNews.put("Renault","Company lose 1 million dollars and got a lot of credits");
-        carNews.put("Daihatsu","Company closed because of debts");
-        carNews.put("Ford","Engineers will create new model of pickup");
-        carNews.put("GMS","New way of tuning is unlocked");
-        carNews.put("Isuzu","Truck from Isuzu gets status of best truck in Ukraine");
-        carNews.put("Infinity","QX50 sets new record on track");
-        carNews.put("Suzuki","New model Jimny is the copy of Mercedes G500");
-        carNews.put("Mercedes","Tuning lab Brabus will create modified model of S63 coupe");
+        carBrendToNews.put("Volkswagen", "There will be a new model of Golf in 2020 ");
+        carBrendToNews.put("BMW","Company will show new electric car on base i3 ");
+        carBrendToNews.put("Audi","Customers can buy audi e-tron in 2020 ");
+        carBrendToNews.put("Toyota","The new sports car will be show in March ");
+        carBrendToNews.put("Renault","Company lose 1 million dollars and got a lot of credits");
+        carBrendToNews.put("Daihatsu","Company closed because of debts");
+        carBrendToNews.put("Ford","Engineers will create new model of pickup");
+        carBrendToNews.put("GMS","New way of tuning is unlocked");
+        carBrendToNews.put("Isuzu","Truck from Isuzu gets status of best truck in Ukraine");
+        carBrendToNews.put("Infinity","QX50 sets new record on track");
+        carBrendToNews.put("Suzuki","New model Jimny is the copy of Mercedes G500");
+        carBrendToNews.put("Mercedes","Tuning lab Brabus will create modified model of S63 coupe");
     }
 
     public String getValue(String key) {
-        return carNews.get(key);
+        return carBrendToNews.get(key);
     }
 
     @Override

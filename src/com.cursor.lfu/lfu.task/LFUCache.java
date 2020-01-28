@@ -6,7 +6,7 @@ import java.util.Map;
 public class LFUCache {
     private Node head;
     private Node tail;
-    private Map<Long, Node> map;
+    private Map<Integer, Node> map;
     private int capacity;
 
     public LFUCache(int capacity) {
@@ -14,7 +14,7 @@ public class LFUCache {
         this.map = new HashMap<>();
     }
 
-    public String get(long key) {
+    public String contains(int key) {
 
         if (map.get(key) == null) {
             return null;
@@ -28,7 +28,7 @@ public class LFUCache {
         return item.news;
     }
 
-    public void put(Long key, String news) {
+    public void put(int key, String news) {
 
         if (map.containsKey(key)) {
             Node item = map.get(key);

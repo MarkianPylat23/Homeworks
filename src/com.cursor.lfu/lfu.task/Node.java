@@ -1,13 +1,13 @@
 package com.cursor.lfu.lfu.task;
 
 public class Node {
-    long key;
-    String news;
-    int frequency;
+    public int key;
+    public String news;
+    public int frequency;
     Node prev;
     Node next;
 
-    public Node(long key, String news, int frequency){
+    public Node(int key, String news, int frequency){
         this.key   = key;
         this.news = news;
         this.frequency = frequency;
