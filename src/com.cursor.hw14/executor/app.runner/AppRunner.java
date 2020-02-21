@@ -12,8 +12,9 @@ public class AppRunner {
                 "8 - Mariupol\n 9 - Kharkiv\n 10 - Rivne\n");
 
         HttpServer server = new HttpServer();
+
         for (int start = 0; start < NUM_OF_REQUEST; start++) {
-            server.startRequest(new Request());
+            server.performRequest(new Request());
         }
     }
 }

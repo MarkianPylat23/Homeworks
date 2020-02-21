@@ -6,24 +6,25 @@ import java.util.concurrent.Executors;
 
 public class HttpServer {
     private static final int NUM_OF_CITIES = 10;
-    private static final int LIMIT = 11;
+    private static final int LIMIT_OF_CITIES = 11;
 
-    public void startRequest(Request request) {
-        ExecutorService service = Executors.newSingleThreadExecutor();
-        int criticalNum = getRandomNum();
-        service.submit(request);
+    public void performRequest(Request request) {
+        ExecutorService executorService = Executors.newSingleThreadExecutor();
+        int randomNum = getRandomNum();
+        executorService.submit(request);
         request.showMessage();
+
         try {
-            if (criticalNum > NUM_OF_CITIES) {
+            if (randomNum > NUM_OF_CITIES) {
                 throw new IllegalThreadStateException();
-            } else showStatus();
+            } else {
+                showStatus();
+            }
         } catch (IllegalThreadStateException i) {
-            System.out.println("\nSERVER: ERROR"
-                    + "\n"
-                    + "\nTrying again...");
-            service.submit(request);
+            System.out.println("\nSERVER: ERROR" + "\nTrying again...");
+            executorService.submit(request);
         }
-        service.shutdown();
+        executorService.shutdown();
     }
 
     public void showStatus() {
@@ -32,6 +33,6 @@ public class HttpServer {
 
     private int getRandomNum() {
         Random random = new Random();
-        return random.nextInt(LIMIT);
+        return random.nextInt(LIMIT_OF_CITIES);
     }
 }
